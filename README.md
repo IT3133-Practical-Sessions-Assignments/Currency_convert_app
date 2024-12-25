@@ -16,4 +16,4 @@ Follow these steps to set up the app locally:
 
 1. Clone the repository:  
    ```bash  
-   git clone  https://github.com/IT3133-Practical-Sessions-Assignments/Currency_convert_app
+   git clone https://github.com/IT3133-Practical-Sessions-Assignments/Currency_convert_app.git
