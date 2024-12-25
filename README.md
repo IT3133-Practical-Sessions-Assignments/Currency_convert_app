@@ -24,5 +24,7 @@ Follow these steps to set up the app locally:
  ## 📊 How It Works
  
  1. Enter the amount you want to convert.
+    
  2.Select the source and target currencies.
+ 
  3.Click the Convert button to get the converted value in real-time.
