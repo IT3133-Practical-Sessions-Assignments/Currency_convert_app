@@ -20,6 +20,17 @@ export default function App() {
     EUR: { USD: 1.18, LKR: 380 },
   };
   
+  const convertCurrency = () => {
+    if (!amount || isNaN(amount)) {
+      setError("Please enter a valid amount");
+      return;
+    }
+    setError("");
+    const rate = conversionRates[fromCurrency][toCurrency];
+    const result = parseFloat(amount) * rate;
+    setConvertedAmount(result.toFixed(2));
+  };
+  
 
   return <View style={styles.container}></View>;
 }
