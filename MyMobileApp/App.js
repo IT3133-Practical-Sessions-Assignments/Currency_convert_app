@@ -102,5 +102,44 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     padding: 20,
   },
+
+  title: {
+    fontSize: 24,
+    fontWeight: "bold",
+    marginBottom: 20,
+  },
+  label: {
+    fontSize: 16,
+    marginVertical: 10,
+  },
+  input: {
+    height: 40,
+    borderColor: "gray",
+    borderWidth: 1,
+    width: "100%",
+    marginBottom: 20,
+    paddingHorizontal: 10,
+  },
+  dropdown: {
+    marginBottom: 20,
+    width: "100%",
+    borderColor: "#ccc",
+  },
+  dropdownContainer: {
+    borderColor: "#ccc",
+    zIndex: 1000,
+  },
+  result: {
+    fontSize: 18,
+    color: "green",
+    marginTop: 20,
+  },
+  error: {
+    fontSize: 16,
+    color: "red",
+    marginTop: 20,
+  },
+
+
 });
 
