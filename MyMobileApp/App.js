@@ -31,6 +31,12 @@ export default function App() {
     setConvertedAmount(result.toFixed(2));
   };
   
+  const currencyOptions = [
+    { label: "USD", value: "USD" },
+    { label: "LKR", value: "LKR" },
+    { label: "EUR", value: "EUR" },
+  ];
+  
 
   return <View style={styles.container}></View>;
 }
