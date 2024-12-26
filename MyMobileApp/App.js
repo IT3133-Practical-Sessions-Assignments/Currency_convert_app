@@ -38,8 +38,8 @@ export default function App() {
   ];
 
 
-  
-    return (
+
+  return (
     <View style={styles.container}>
       <Text style={styles.title}>Currency Converter</Text>
 
@@ -79,10 +79,19 @@ export default function App() {
       />
 
       <Button title="Convert" onPress={convertCurrency} />
+
+      {convertedAmount ? (
+        <Text style={styles.result}>
+          Converted Amount: {convertedAmount} {toCurrency}
+        </Text>
+      ) : null}
+
+      {error ? <Text style={styles.error}>{error}</Text> : null}
+
     </View>
-    );
-  }
-  
+  );
+}
+
 
 
 const styles = StyleSheet.create({
