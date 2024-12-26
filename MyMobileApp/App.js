@@ -14,6 +14,13 @@ export default function App() {
   const [fromCurrencyOpen, setFromCurrencyOpen] = useState(false);
   const [toCurrencyOpen, setToCurrencyOpen] = useState(false);
 
+  const conversionRates = {
+    USD: { LKR: 320, EUR: 0.85 },
+    LKR: { USD: 0.0031, EUR: 0.0026 },
+    EUR: { USD: 1.18, LKR: 380 },
+  };
+  
+
   return <View style={styles.container}></View>;
 }
 
