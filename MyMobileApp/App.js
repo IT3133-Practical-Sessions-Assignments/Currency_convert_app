@@ -19,7 +19,7 @@ export default function App() {
     LKR: { USD: 0.0031, EUR: 0.0026 },
     EUR: { USD: 1.18, LKR: 380 },
   };
-  
+
   const convertCurrency = () => {
     if (!amount || isNaN(amount)) {
       setError("Please enter a valid amount");
@@ -30,16 +30,60 @@ export default function App() {
     const result = parseFloat(amount) * rate;
     setConvertedAmount(result.toFixed(2));
   };
-  
+
   const currencyOptions = [
     { label: "USD", value: "USD" },
     { label: "LKR", value: "LKR" },
     { label: "EUR", value: "EUR" },
   ];
+
+
+  
+    return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Currency Converter</Text>
+
+      <Text style={styles.label}>Amount:</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Enter amount"
+        keyboardType="numeric"
+        value={amount}
+        onChangeText={setAmount}
+      />
+
+      <Text style={styles.label}>From Currency:</Text>
+      <DropDownPicker
+        open={fromCurrencyOpen}
+        value={fromCurrency}
+        items={currencyOptions}
+        setOpen={setFromCurrencyOpen}
+        setValue={setFromCurrency}
+        setItems={() => { }}
+        style={styles.dropdown}
+        placeholder="Select currency"
+        dropDownContainerStyle={styles.dropdownContainer}
+      />
+
+      <Text style={styles.label}>To Currency:</Text>
+      <DropDownPicker
+        open={toCurrencyOpen}
+        value={toCurrency}
+        items={currencyOptions}
+        setOpen={setToCurrencyOpen}
+        setValue={setToCurrency}
+        setItems={() => { }}
+        style={styles.dropdown}
+        placeholder="Select currency"
+        dropDownContainerStyle={styles.dropdownContainer}
+      />
+
+      <Button title="Convert" onPress={convertCurrency} />
+    </View>
+    );
+  }
   
 
-  return <View style={styles.container}></View>;
-}
 
 const styles = StyleSheet.create({
   container: {
